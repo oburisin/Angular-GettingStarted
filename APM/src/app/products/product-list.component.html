@@ -1,6 +1,6 @@
 <div class='panel panel-primary'>
     <div class='panel-heading'>
-        Product List
+        {{pageTitle}}
     </div>
     <div class='panel-body'>
         <div class='row'>
@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class='table-responsive'>
-        <table class='table'>
+        <table class='table' *ngIf='products && products.length'> <!-- BrowserModule exposes this *ngIf and it affects visibility of element based on the expression-->
             <thead>
                 <tr>
                     <th>
